@@ -2,11 +2,7 @@ import { Editor, MarkdownView, Notice, Plugin, Workspace, TFile } from 'obsidian
 
 import { AiTaggerSettings } from "./settings";
 import { AiTaggerSettingTab } from "./settings-tab";
-<<<<<<< HEAD
-import { convertTagsToLowerCase } from "./utils";
-=======
 import { tagText, tagFileOrFolder } from "./features/tag-generator";
->>>>>>> 52575ad (feat:init)
 
 const DEFAULT_SETTINGS: Partial<AiTaggerSettings> = {
 	llmApiKey: '',
@@ -31,16 +27,10 @@ export default class AiTagger extends Plugin {
 	 * 从磁盘读取设置。
 	 */
 	async loadSettings() {
-<<<<<<< HEAD
-		// Object.assign() is a JavaScript function that copies all properties from one object to another. 
-		// Any properties that are returned by loadData() override the properties in DEFAULT_SETTINGS.
-		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
-=======
 		// Object.assign() 是一个 JavaScript 函数，用于把一个对象的所有属性复制到另一个对象。
 		// loadData() 返回的属性会覆盖 DEFAULT_SETTINGS 中对应的属性。
 		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
 		// 统一使用插件设置（this.saveData / this.loadData）
->>>>>>> 52575ad (feat:init)
 	}
 
 	/**
@@ -49,11 +39,6 @@ export default class AiTagger extends Plugin {
 	async saveSettings() {
 		// loadData() 和 saveData() 提供了一个简单方式读写磁盘上的插件数据。
 		await this.saveData(this.settings);
-<<<<<<< HEAD
-		// Reinitialize LLM when settings change
-		await this.initializeLlm();
-=======
->>>>>>> 52575ad (feat:init)
 	}
 
 	// Unified settings via this.saveData()/this.loadData()
@@ -68,14 +53,7 @@ export default class AiTagger extends Plugin {
 		// 添加一个设置页面，允许用户配置插件
 		this.addSettingTab(new AiTaggerSettingTab(this.app, this));
 
-<<<<<<< HEAD
-		// initialize LLM
-		await this.initializeLlm();
-
-		// This creates an icon in the left ribbon.
-=======
 		// 在左侧工具栏创建一个图标按钮。
->>>>>>> 52575ad (feat:init)
 		this.addRibbonIcon('wand-2', 'Generate tags!', async () => {
 			// 当用户点击该图标时触发。
 

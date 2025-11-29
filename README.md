@@ -4,27 +4,19 @@
 
 auto tags 是一个 Obsidian ([https://obsidian.md](https://obsidian.md)) 插件，通过使用各种大型语言模型（LLM）来分析并为你的文档一键生成标签。
 
-<<<<<<< HEAD
-| Provider | Model | Token Limit | Type |
-|----------|--------|-------------|------|
-| OpenAI | GPT-4o mini | 128K | Closed Source |
-| OpenAI | GPT-4o | 128K | Closed Source |
-| Mistral AI | Mistral Small | 32K | Closed Source |
-| Mistral AI | Mistral Large | 128K | Closed Source |
-| Mistral AI | Mistral Nemo | 128K | Open Source |
-| Anthropic | Claude 3.5 Haiku | 200K | Closed Source |
-| Anthropic | Claude 3.5 Sonnet | 200K | Closed Source |
-| Anthropic | Claude 3 Opus | 200K | Closed Source |
-| Groq | Llama 3 Groq 8B | 8K | Open Source |
-| Groq | Llama 3 Groq 70B | 8K | Open Source |
-| Groq | Llama 3.1 8B | 128K | Open Source |
-| Groq | Llama 3.1 70B | 128K | Open Source |
-| Ollama | Llama 3.2 | 128K | Open Source |
-| Ollama | Mistral Nemo | 128K | Open Source |
-| Ollama | Qwen 2.5 | 128K | Open Source |
-=======
+auto tags 是一个 Obsidian ([https://obsidian.md](https://obsidian.md)) 插件，通过使用各种大型语言模型（LLM）来分析并为你的文档一键生成标签。
+
 该插件会分析你当前编辑器中打开的文档内容以及你历史上使用过的标签（若有），返回最多 5 个你之前使用过的相关标签，并最多生成 3 个全新的建议标签。
->>>>>>> 52575ad (feat:init)
+
+本项目继承自 [lucagrippa/obsidian-ai-tagger](https://github.com/lucagrippa/obsidian-ai-tagger)，并在此基础上进行了代码更新和功能增强。
+
+## 📚 文档
+
+- [快速开始](docs/quick-start.md)
+- [标签生成器设计](docs/tag-generator-design.md)
+- [开发指南](docs/development.md)
+
+## 🚀 快速开始
 
 本项目继承自 [lucagrippa/obsidian-ai-tagger](https://github.com/lucagrippa/obsidian-ai-tagger)，并在此基础上进行了代码更新和功能增强。
 
