@@ -112,3 +112,27 @@
 
 注：如果你希望恢复自动构建 zip 的功能，我可以在 workflow 中添加一个非常简单的打包上传步骤。
 
+## 重新触发/覆盖已有 Tag（重新发布）
+
+如果你需要重置远程 tag 并重新触发 release（例如修复了构建或上传问题），可以使用下面的命令：
+
+```bash
+# 删除远程标签 v0.0.1
+git push origin --delete v0.0.1
+
+# 如果需要，删除本地标签（如果存在）
+git tag -d v0.0.1
+
+# 重新创建本地标签（可选 - 指向当前提交）
+git tag v0.0.1
+
+# 推送标签到远程（触发 Actions）
+git push origin v0.0.1
+```
+
+说明：
+
+- 删除远程 tag 会移除相应的 GitHub Release（如有）。有时需要在 GitHub Releases 页面删除 Draft Release 后再重新创建 tag。
+- 在重新创建并推送 tag 后，工作流会重新运行，生成新的 Release 并上传资产。
+- 注意：如果你的 Release 已经发布（而非草稿），删除 tag 并不会自动删除该 Release；你可能还需在 Releases 页面手动删除相应的 Release 条目。
+
