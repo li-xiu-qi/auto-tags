@@ -1,0 +1,16 @@
+{
+<<<<<<< HEAD
+	"id": "ai-tagger",
+	"name": "AI Tagger",
+	"version": "1.2.4",
+=======
+	"id": "obsidian-auto-tags",
+	"name": "auto tags",
+	"version": "0.0.1",
+>>>>>>> 52575ad (feat:init)
+	"minAppVersion": "0.15.0",
+	"description": "分析并一键为笔记生成标签，提升笔记组织效率。\nAnalyze and tag your document with one click for efficient note organization using AI.",
+	"author": "li-xiu-qi",
+	"authorUrl": "https://github.com/li-xiu-qi",
+	"isDesktopOnly": false
+}

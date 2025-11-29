@@ -1,0 +1,45 @@
+{
+	"name": "obsidian-auto-tags",
+	"version": "0.0.1",
+	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"type": "module",
+	"main": "main.js",
+	"scripts": {
+		"dev": "node esbuild.config.mjs",
+		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+		"version": "node version-bump.mjs && git add manifest.json versions.json",
+		"copy-prompts": "cp -r src/prompts/ dist/prompts/"
+	},
+	"keywords": [],
+	"author": "li-xiu-qi",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^22.8.7",
+		"@typescript-eslint/eslint-plugin": "8.15.0",
+		"@typescript-eslint/parser": "8.15.0",
+		"builtin-modules": "3.3.0",
+		"esbuild": "0.24.0",
+		"obsidian": "latest",
+		"tslib": "2.8.1",
+		"typescript": "5.6.3"
+	},
+	"dependencies": {
+<<<<<<< HEAD
+		"@langchain/anthropic": "^0.3.7",
+		"@langchain/community": "^0.3.12",
+		"@langchain/core": "^0.3.16",
+		"@langchain/google-genai": "^0.1.4",
+		"@langchain/groq": "^0.1.2",
+		"@langchain/mistralai": "^0.1.1",
+		"@langchain/ollama": "^0.1.1",
+		"@langchain/openai": "^0.3.12",
+		"@langchain/xai": "^0.0.1",
+		"@mistralai/mistralai": "^0.1.3",
+		"langchain": "^0.3.6",
+		"langfuse-langchain": "^3.29.1",
+		"openai": "^4.28.0"
+=======
+		"openai": "^6.9.1"
+>>>>>>> 52575ad (feat:init)
+	}
+}
